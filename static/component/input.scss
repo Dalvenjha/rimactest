@@ -1,0 +1,24 @@
+@import "../variables.scss";
+
+.c-input {
+  border-radius: 4px;
+  border: 1px solid $gray1;
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+
+  &--text {
+    font-size: 12px;
+    color: $gray2;
+  }
+
+  input {
+    color: $text;
+    border: none;
+    outline: none;
+  }
+}

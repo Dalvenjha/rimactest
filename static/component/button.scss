@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.c-button {
+  background-color: $red;
+  color: white;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
