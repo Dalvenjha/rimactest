@@ -20,6 +20,19 @@
   outline: none;
 }
 
+.g-select {
+  position: relative;
+}
+.g-select .arrow {
+  background: url(../assets/img/select-arrow.svg);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-repeat: no-repeat;
+  right: 8px;
+  top: 25px;
+}
+
 .cbx {
   margin: auto;
   display: flex;
@@ -112,6 +125,89 @@
   padding: 0 20px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.c-link--purple {
+  color: #A9B1D1;
+  font-size: 12px;
+  text-decoration: none;
+}
+.c-link--purple:hover {
+  text-decoration: none;
+  color: #939DFF;
+}
+
+.radio {
+  margin-bottom: 16px;
+}
+.radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.radio input[type=radio] + .radio-label:before {
+  content: "";
+  background: white;
+  border-radius: 100%;
+  border: 1px solid #C5CBE0;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: relative;
+  top: -0.2em;
+  margin-right: 1em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+.radio input[type=radio]:checked + .radio-label:before {
+  background-color: #83CC5E;
+  box-shadow: inset 0 0 0 4px white;
+  border-color: #83CC5E;
+}
+.radio input[type=radio]:focus + .radio-label:before {
+  outline: none;
+  border-color: #83CC5E;
+}
+.radio input[type=radio]:disabled + .radio-label:before {
+  box-shadow: inset 0 0 0 4px #83CC5E;
+  border-color: #478129;
+  background: #478129;
+}
+.radio input[type=radio] + .radio-label:empty:before {
+  margin-right: 0;
+}
+.radio label {
+  display: flex;
+  align-items: center;
+}
+.radio label span {
+  font-size: 16px;
+  margin-top: -9px;
+  display: flex;
+}
+
+.list-date--info {
+  border-bottom: 1px solid #EDEFF5;
+  display: flex;
+  padding: 16px 0;
+  width: 100%;
+}
+.list-date--info .type {
+  min-width: 120px;
+  padding-left: 15px;
+}
+
+.steps {
+  color: #A3ABCC;
+}
+@media (min-width: 992px) {
+  .steps {
+    margin-left: -32px;
+  }
+}
+.steps .text-red {
+  color: #EF3340;
 }
 
 body {
@@ -267,12 +363,14 @@ body {
   border-bottom: 1px solid #C5CBE0;
   border-right: 0;
   height: 56px;
-  padding: 0 15px;
+  padding: 0 20px 0 15px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  min-width: 90px;
   outline: none;
   color: #494F66;
+  appearance: initial;
+  min-width: 100px;
+  position: relative;
 }
 .home--form .date-document .c-input {
   border-top-left-radius: 0;
@@ -292,10 +390,12 @@ body {
   position: absolute;
   width: 100%;
   z-index: 1;
+  background-color: #EF3340;
 }
 @media (min-width: 992px) {
   .step .header {
     height: 64px;
+    background-color: transparent;
   }
 }
 .step--banner {
@@ -307,12 +407,14 @@ body {
   padding-top: 80px;
   position: relative;
   margin-right: -30px;
+  display: none;
 }
 @media (min-width: 992px) {
   .step--banner {
     height: 650px;
     margin-right: 0;
     padding-top: 100px;
+    display: block;
   }
 }
 .step--banner .ilustracion {

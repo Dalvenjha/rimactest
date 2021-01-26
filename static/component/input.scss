@@ -22,3 +22,17 @@
     outline: none;
   }
 }
+
+.g-select {
+  position: relative;
+  
+  .arrow {
+    background: url(../assets/img/select-arrow.svg);
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 8px;
+    top: 25px;
+  }
+}

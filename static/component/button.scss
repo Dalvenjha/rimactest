@@ -14,3 +14,16 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.c-link {
+  &--purple {
+    color: $purple;
+    font-size: 12px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $purple2;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.steps {
+  color: $gray2;
+
+  @media (min-width: 992px) {
+    margin-left: -32px;
+  }
+
+  .text-red {
+    color: $red;
+  }
+}
