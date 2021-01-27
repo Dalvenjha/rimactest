@@ -5,6 +5,9 @@
 @import "./component/radio.scss";
 @import "./component/list-date.scss";
 @import "./component/steps.scss";
+@import "./component/list-price.scss";
+@import "./component/list-insured.scss";
+@import "./component/box-benefit.scss";
 @import "./variables.scss";
 
 body {
@@ -19,6 +22,15 @@ body {
 
 .fw--300 {
   font-weight: 300;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+
+  @media (min-width: 992px) {
+    font-size: 40px;
+  }
 }
 
 .subtitle {
@@ -246,6 +258,17 @@ body {
       bottom: 0;
       left: -9999px;
     }
+
+    &.full {
+      height: 100vh;
+
+      .ilustracion {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 400px;
+        right: -180px;
+      }
+    }
   }
 
   .home--form {
@@ -254,5 +277,31 @@ body {
 
   .c-button {
     float: right;
+  }
+}
+
+.box-thanks {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+      align-items: flex-end;
+    }
+
+    .img {
+      border-bottom: 1px solid #EDEFF5;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      img {
+        margin-bottom: -12px;
+      }
+    }
   }
 }
